@@ -16,6 +16,19 @@ public class Ingredient {
     private BigDecimal amount;
     @OneToOne(fetch = FetchType.EAGER)
     private UnitOfMeasure uom;
+
+    public Ingredient( String description, BigDecimal amount, UnitOfMeasure uom) {
+
+        this.description = description;
+
+        this.amount = amount;
+      this.uom = uom;
+    }
+
+    public Ingredient() {
+
+    }
+
     public Long getId() {
         return id;
     }
